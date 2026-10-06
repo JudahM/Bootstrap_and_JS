@@ -1,0 +1,25 @@
+:root {
+    /* Colors */
+    --primary-orange: #EB6424;
+        /* Text */
+        .text-orange {
+            color: var(--primary-orange);
+        }
+}
+
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: #FFFFFF;
+    border: 2px solid var(--primary-orange);
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #FA9500;
+    border-color: #FA9500;
+    color: #FFFFFF;
+}
+
+.nav-link:hover {
+    color: var(--primary-orange);
+}
