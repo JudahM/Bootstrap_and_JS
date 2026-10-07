@@ -1,10 +1,11 @@
 :root {
     /* Colors */
     --primary-orange: #EB6424;
-        /* Text */
-        .text-orange {
-            color: var(--primary-orange);
-        }
+}
+
+/* Text */
+.text-orange {
+    color: var(--primary-orange);
 }
 
 .btn-orange {
