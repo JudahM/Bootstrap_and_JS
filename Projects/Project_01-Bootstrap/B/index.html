@@ -9,9 +9,6 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
         <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -25,7 +22,13 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">🥐 Recettes de pauvre</a>
-                <div class="collapse navbar-collapse d-block d-md-flex justify-content-md-end" id="menuNavegacao">
+                <input type="checkbox" id="menuToggle" class="d-none">
+                <!-- hamburger* -->
+                <label for="menuToggle" class="navbar-toggler d-md-none" style="cursor: pointer;">
+                    <span class="navbar-toggler-icon"></span>
+                </label>
+
+                <div class="collapse navbar-collapse justify-content-md-end menu-mobile-custom" id="menuNavegacao">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Início</a>
@@ -59,7 +62,7 @@
 
                 <!-- Image -->
                 <div class="col-12 col-md-6 order-1 order-md-2 text-center">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    <img src="./assets/images/hero-image-02.jpeg"
                         alt="Prato de comida apetitoso e barato" class="img-fluid rounded shadow-lg">
                 </div>
             </div>
@@ -243,12 +246,18 @@
             </div>
         </section>
 
-        <!-- Formulários -->
+        <!-- Formulário de Cadastro de Receita -->
         <section class="container mb-5">
-            <div class="row g-5">
+            <div class="row g-5 align-items-center">
 
-                <!-- ---------- Formulário de Cadastro de Receita ---------- -->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-5">
+                    <img src="./assets/images/berry_delight.jpg" 
+                        alt="foolishness, Dante!" 
+                        class="img-fluid rounded shadow h-100 w-100" 
+                        style="object-fit: cover; min-height: 400px;">
+                </div>
+
+                <div class="col-12 col-lg-7">
                     <div class="card shadow-sm border-0 h-100">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="fw-bold mb-4">Envie sua Receita</h3>
@@ -256,7 +265,7 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="nomeReceita" class="form-label">Nome da Receita</label>
-                                    <input type="text" class="form-control" id="nomeReceita" placeholder="Ex: Sopa de Pedra">
+                                    <input type="text" class="form-control" id="nomeReceita" placeholder="Ex: Sopa de Pedra" required>
                                 </div>
 
                                 <!-- input group -->
@@ -264,20 +273,20 @@
                                     <label for="custo" class="form-label">Custo Estimado</label>
                                     <div class="input-group">
                                         <span class="input-group-text text-orange border-orange fw-bold">R$</span>
-                                        <input type="number" class="form-control" id="custo" placeholder="15">
-                                        <span class="input-group-text border-orange">,00</span>
+                                        <input type="number" class="form-control" id="custo" placeholder="15" required>
                                     </div>
                                 </div>
 
                                 <!-- Dropdown -->
                                 <div class="mb-3">
                                     <label for="categoria" class="form-label">Categoria</label>
-                                    <select class="form-select" id="categoria">
-                                        <option selected disabled>Escolha a situação ideal...</option>
+                                    <select class="form-select" id="categoria" required>
+                                        <option selected disabled value="">Escolha a situação ideal...</option>
                                         <option value="1">Sobrevivência (Fim de mês)</option>
                                         <option value="2">Ostentação de pobre (Início do mês)</option>
                                         <option value="3">Doce de microondas</option>
                                     </select>
+                                    <div class="form-text">Selecione a categoria que mais combina com o seu prato.</div>
                                 </div>
 
                                 <!-- Radios -->
@@ -310,51 +319,63 @@
                     </div>
                 </div>
 
-                <!-- ---------- Formulário de Contato ---------- -->
-                <div class="col-12 col-lg-6">
-                    <div class="card shadow-sm border-0 h-100 bg-light">
-                        <div class="card-body p-4 p-md-5">
-                            <h3 class="fw-bold mb-4">Fale com a gente</h3>
-                            <p class="text-muted mb-4">Deu ruim na receita? Quer mandar uma sugestão? Escreve aí!</p>
-                            
-                            <form>
-                                <div class="row g-3 mb-3">
-                                    <div class="col-12 col-md-6">
-                                        <label for="nomeContato" class="form-label">Seu Nome</label>
-                                        <input type="text" class="form-control" id="nomeContato" placeholder="João da Silva">
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="emailContato" class="form-label">Seu E-mail</label>
-                                        <input type="email" class="form-control" id="emailContato" placeholder="joao@email.com">
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="assunto" class="form-label">Assunto</label>
-                                    <input type="text" class="form-control" id="assunto" placeholder="Ex: Queimei a panela">
-                                </div>
-
-                                <!-- Textarea -->
-                                <div class="mb-4">
-                                    <label for="mensagem" class="form-label">Mensagem</label>
-                                    <textarea class="form-control" id="mensagem" rows="5" placeholder="Pode desabafar..."></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-dark w-100">Mandar Mensagem</button>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
+
+        <!-- Modal Contato -->
+        <input type="checkbox" id="modalToggle" class="d-none">
+        <!-- open modal (btn) -->
+        <div class="container text-center my-5 pb-5">
+            <label for="modalToggle" class="btn btn-dark btn-lg px-5 shadow-sm">
+                <i class="bi bi-envelope me-2"></i> Fale com a gente
+            </label>
+        </div>
+        <div class="modal-custom position-fixed top-0 start-0 w-100 h-100 justify-content-center align-items-center">
+            
+            <!-- dark bg * -->
+            <label for="modalToggle" class="position-absolute top-0 start-0 w-100 h-100 modal-backdrop-custom"></label>
+
+            <div class="card border-0 shadow-lg z-3" style="max-width: 500px; width: 90%;">
+                <div class="card-header bg-white border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold mb-0">Fale com a gente</h5>
+                    <label for="modalToggle" class="btn-close" style="cursor: pointer;"></label>
+                </div>
+
+                <div class="card-body px-4 pb-4">
+                    <p class="text-muted mb-4">Mande sua sugestão, dúvida ou receita de família!</p>
+                    
+                    <form>
+                        <div class="mb-3">
+                            <label for="nomeModal" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nomeModal" placeholder="Como quer ser chamado?">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="emailModal" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="emailModal" placeholder="seu@email.com">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="mensagemModal" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagemModal" rows="3" placeholder="Escreva aqui..."></textarea>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletterModal">
+                            <label class="form-check-label text-muted" for="newsletterModal">
+                                Quero receber receitas baratinhas por e-mail toda semana.
+                            </label>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <label for="modalToggle" class="btn btn-outline-dark w-50">Cancelar</label>
+                            <button type="submit" class="btn btn-orange w-50">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
-
-
-
-    <!-- Scripts -->
-    <script src="./js/main.js"></script>
 </body>
 
 </html>

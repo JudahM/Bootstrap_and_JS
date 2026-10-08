@@ -24,3 +24,23 @@
 .nav-link:hover {
     color: var(--primary-orange);
 }
+
+/* Menu mobile - Hamburger */
+#menuToggle:checked ~ .menu-mobile-custom {
+    display: block;
+}
+
+/* --- MODAL --- */
+.modal-custom {
+    display: none;
+    z-index: 1050;
+}
+
+#modalToggle:checked ~ .modal-custom {
+    display: flex; 
+}
+
+.modal-backdrop-custom {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
