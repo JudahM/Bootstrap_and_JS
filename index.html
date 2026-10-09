@@ -375,6 +375,144 @@
                 </div>
             </div>
         </div>
+
+        <!-- ---------- DASHBOARD ---------- -->
+        <section class="container-fluid mt-5 pt-5 border-top bg-light">
+            <div class="row">
+                
+                <!-- Sidebar -->
+                <aside class="col-12 col-md-3 col-lg-2 d-none d-md-flex flex-column p-4 bg-white shadow-sm position-sticky top-0" style="height: 100vh;">
+                    <h5 class="text-orange fw-bold mb-4">Painel Admin</h5>
+                    <ul class="nav flex-column gap-2">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-dark bg-light rounded fw-bold"><i class="bi bi-graph-up me-2"></i>Métricas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted"><i class="bi bi-people me-2"></i>Usuários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted"><i class="bi bi-gear me-2"></i>Configurações</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-auto p-3 bg-dark text-white rounded text-center shadow-sm">
+                        <small>Versão<br><strong>v1.0</strong></small>
+                    </div>
+                </aside>
+
+                <!-- Visão Geral e Méticas -->
+                <main class="col-12 col-md-9 col-lg-10 p-4 p-md-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5 text-center text-md-start">
+                        <div class="mb-3 mb-md-0">
+                            <h2 class="fw-bold">Visão Geral</h2>
+                            <p class="text-muted d-none d-sm-block mb-0">Gerencie as estatísticas e aprovações do seu site.</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-orange px-4 mb-2 mb-md-0 me-md-2 shadow-sm">Nova Receita</button>
+                            <button class="btn btn-outline-danger px-4 shadow-sm">Gerar Relatório</button>
+                        </div>
+                    </div>
+
+                    <!-- Alerts -->
+                    <div class="alert alert-info border-0 shadow-sm d-flex align-items-center mb-5" role="alert">
+                        <i class="bi bi-info-circle-fill me-3 fs-4"></i>
+                        <div>
+                            Tivemos um pico de acessos! <strong>+250%</strong> de visitantes na receita de "Miojo Carbonara" na última hora.
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 mb-5">
+                        
+                        <!-- Card 1  -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm h-100 bg-success text-white">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Receitas Ativas</h6>
+                                    <h2 class="display-5 fw-bold mb-0">142</h2>
+
+                                    <span class="badge bg-white text-success mt-3 shadow-sm">+12 na semana</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm h-100 bg-warning text-dark">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Pendentes</h6>
+                                    <h2 class="display-5 fw-bold mb-0">8</h2>
+                                    <!-- Etapa 8: Badge 2 -->
+                                    <span class="badge bg-dark mt-3 shadow-sm">Ação necessária</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm h-100 bg-primary text-white">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Usuários</h6>
+                                    <h2 class="display-5 fw-bold mb-0">3.4k</h2>
+                                    <span class="badge bg-white text-primary mt-3 shadow-sm">Estável</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col order-first order-xl-last">
+                            <div class="card border-0 shadow-sm h-100 bg-danger text-white">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Erros</h6>
+                                    <h2 class="display-5 fw-bold mb-0">12</h2>
+                                    <span class="badge bg-white text-danger mt-3 shadow-sm">Atenção</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Admin Table -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-0 py-4 px-4 d-flex justify-content-between align-items-center">
+                            <h5 class="fw-bold mb-0">Últimas Submissões</h5>
+                        </div>
+                        <div class="card-body p-0 table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th class="ps-4">Receita</th>
+                                        <th>Autor</th>
+                                        <th>Status</th>
+                                        <th class="text-end pe-4">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">Lasanha de Pão de Forma</td>
+                                        <td class="text-muted">Maria Silva</td>
+                                        <td><span class="badge bg-warning text-dark">Em Análise</span></td>
+                                        <td class="text-end pe-4">
+                                            <button class="btn btn-sm btn-success me-2">Aprovar</button>
+                                            <button class="btn btn-sm btn-link text-danger text-decoration-none p-0">Rejeitar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">Brigadeiro sem Leite Moça</td>
+                                        <td class="text-muted">João Pedro</td>
+                                        <td><span class="badge bg-success">Publicado</span></td>
+                                        <td class="text-end pe-4">
+                                            <button class="btn btn-sm btn-outline-dark">Editar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </section>
+
     </main>
 </body>
 
