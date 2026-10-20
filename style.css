@@ -1,46 +1,177 @@
-:root {
-    /* Colors */
-    --primary-orange: #EB6424;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Text */
-.text-orange {
-    color: var(--primary-orange);
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
 }
 
-.btn-orange {
-    background-color: var(--primary-orange);
-    color: #FFFFFF;
-    border: 2px solid var(--primary-orange);
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    border-color: #008000;
+}
+
+#addButton {
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #008000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#addButton:hover {
+    background-color: #006600;
+}
+
+#addButton:active {
+    transform: scale(0.98);
+}
+
+#taskList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
-.btn-orange:hover {
-    background-color: #FA9500;
-    border-color: #FA9500;
-    color: #FFFFFF;
+/* Estilo para a tarefa concluída */
+.task-item.completed {
+    background-color: #e6f4ea;
+    border-color: #c3e6cb;
 }
 
-.nav-link:hover {
-    color: var(--primary-orange);
-}
-
-/* Menu mobile - Hamburger */
-#menuToggle:checked ~ .menu-mobile-custom {
-    display: block;
-}
-
-/* --- MODAL --- */
-.modal-custom {
-    display: none;
-    z-index: 1050;
-}
-
-#modalToggle:checked ~ .modal-custom {
-    display: flex; 
-}
-
-.modal-backdrop-custom {
-    background-color: rgba(0, 0, 0, 0.6);
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
     cursor: pointer;
 }
+
+.task-text {
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.task-item.completed .checkbox {
+    background-color: #008000;
+    border-color: #008000;
+}
+
+.task-item.completed .checkbox::after {
+    content: '✔';
+    color: white;
+    font-size: 12px;
+}
+
+.delete-btn {
+    background-color: #ff0000;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%) translateY(20px);
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast.success { background-color: #28a745; }
+.toast.error { background-color: #dc3545; }
+.toast.info { background-color: #17a2b8; }

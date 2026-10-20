@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes de pauvre</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">🥐 Recettes de pauvre</a>
+                <input type="checkbox" id="menuToggle" class="d-none">
+                <!-- hamburger* -->
+                <label for="menuToggle" class="navbar-toggler d-md-none" style="cursor: pointer;">
+                    <span class="navbar-toggler-icon"></span>
+                </label>
+
+                <div class="collapse navbar-collapse justify-content-md-end menu-mobile-custom" id="menuNavegacao">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Receitas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="container mt-5 pt-5 mb-5">
+            <div class="row align-items-center">
+                <!-- Text -->
+                <div class="col-12 col-md-6 order-2 order-md-1 text-center text-md-start mt-4 mt-md-0">
+                    <h1 class="display-4 fw-bold">Comida de estudante não precisa ser ruim.</h1>
+                    <p class="lead text-muted my-4">Receitas práticas e rápidas, e o melhor de tudo, baratas. Pra você não ficar aí passando fome.</p>
+
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                        <a href="#" class="btn btn-orange btn-lg px-4">Ver Receitas</a>
+                        <a href="#" class="btn btn-outline-dark btn-lg px-4">Enviar Receita</a>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="col-12 col-md-6 order-1 order-md-2 text-center">
+                    <img src="./assets/images/hero-image-02.jpeg"
+                        alt="Prato de comida apetitoso e barato" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Receitas (Cards) -->
+        <section class="container mb-5">
+            <h2 class="text-center mb-5 fw-bold">Receitas da Semana</h2>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Miojo Carbonara</h5>
+                                <span class="badge bg-dark">Rápido</span>
+                            </div>
+                            <p class="card-text text-muted">Transforme o pacote de macarrão instantâneo em um prato chique usando ovo e queijo ralado.</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Arroz de Ontem</h5>
+                                <span class="badge bg-success">Reaproveitamento</span>
+                            </div>
+                            <p class="card-text text-muted">Bolinhos fritos crocantes feitos com aquele arroz que sobrou do almoço.</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Pão com Ovo 2.0</h5>
+                                <span class="badge bg-dark">Clássico</span>
+                            </div>
+                            <p class="card-text text-muted">A técnica infalível para a gema mole perfeita na frigideira.</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Pizza de Frigideira</h5>
+                                <span class="badge bg-danger">Fim de mês</span>
+                            </div>
+                            <p class="card-text text-muted">Massa rápida sem fermento biológico. Fica pronta em 15 minutos.</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Strogonoff Barato</h5>
+                                <span class="badge bg-primary">Almoço</span>
+                            </div>
+                            <p class="card-text text-muted">Usando salsicha ou frango desfiado para render muito mais.</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Doce de Leite Rápido</h5>
+                                <span class="badge bg-warning text-dark">Sobremesa</span>
+                            </div>
+                            <p class="card-text text-muted">Feito no microondas com leite condensado. Cuidado pra não queimar!</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Macarrão Alho e Óleo</h5>
+                                <span class="badge bg-dark">Rápido</span>
+                            </div>
+                            <p class="card-text text-muted">Apenas 3 ingredientes e uma refeição digna de restaurante italiano.</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title fw-bold">Falso Hambúrguer</h5>
+                                <span class="badge bg-danger">Fim de mês</span>
+                            </div>
+                            <p class="card-text text-muted">Hambúrguer feito com carne moída de segunda e creme de cebola.</p>
+                            <a href="#" class="btn btn-orange mt-auto">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tabela -->
+        <section class="container mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-4 fw-bold">Despensa de Sobrevivência</h2>
+                    <p class="text-center text-muted mb-4">Ingredientes curingas que você precisa ter e a média de preço.</p>
+                    
+                    <div class="table-responsive shadow-sm rounded">
+                        <table class="table table-striped table-hover align-middle mb-0">
+                            
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col"><i class="bi bi-cart3 text-orange me-2"></i>Ingrediente</th>
+                                    <th scope="col"><i class="bi bi-tag me-2"></i>Categoria</th>
+                                    <th scope="col"><i class="bi bi-hourglass-split me-2"></i>Validade (Média)</th>
+                                    <th scope="col"><i class="bi bi-currency-dollar me-2"></i>Preço Estimado</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Ovo (Dúzia)</td>
+                                    <td>Proteína</td>
+                                    <td>30 dias</td>
+                                    <td>R$ 8,00 - R$ 12,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Macarrão (500g)</td>
+                                    <td>Carboidrato</td>
+                                    <td>1 a 2 anos</td>
+                                    <td>R$ 3,50 - R$ 6,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Creme de Leite</td>
+                                    <td>Curinga</td>
+                                    <td>Vários meses</td>
+                                    <td>R$ 3,00 - R$ 4,50</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Batata (1kg)</td>
+                                    <td>Carboidrato</td>
+                                    <td>2 a 3 semanas</td>
+                                    <td>R$ 4,00 - R$ 7,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Salsicha (1kg)</td>
+                                    <td>Proteína (Fim de mês)</td>
+                                    <td>2 semanas (geladeira)</td>
+                                    <td>R$ 10,00 - R$ 15,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Cadastro de Receita -->
+        <section class="container mb-5">
+            <div class="row g-5 align-items-center">
+
+                <div class="col-12 col-lg-5">
+                    <img src="./assets/images/berry_delight.jpg" 
+                        alt="foolishness, Dante!" 
+                        class="img-fluid rounded shadow h-100 w-100" 
+                        style="object-fit: cover; min-height: 400px;">
+                </div>
+
+                <div class="col-12 col-lg-7">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="fw-bold mb-4">Envie sua Receita</h3>
+                            
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nomeReceita" class="form-label">Nome da Receita</label>
+                                    <input type="text" class="form-control" id="nomeReceita" placeholder="Ex: Sopa de Pedra" required>
+                                </div>
+
+                                <!-- input group -->
+                                <div class="mb-3">
+                                    <label for="custo" class="form-label">Custo Estimado</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text text-orange border-orange fw-bold">R$</span>
+                                        <input type="number" class="form-control" id="custo" placeholder="15" required>
+                                    </div>
+                                </div>
+
+                                <!-- Dropdown -->
+                                <div class="mb-3">
+                                    <label for="categoria" class="form-label">Categoria</label>
+                                    <select class="form-select" id="categoria" required>
+                                        <option selected disabled value="">Escolha a situação ideal...</option>
+                                        <option value="1">Sobrevivência (Fim de mês)</option>
+                                        <option value="2">Ostentação de pobre (Início do mês)</option>
+                                        <option value="3">Doce de microondas</option>
+                                    </select>
+                                    <div class="form-text">Selecione a categoria que mais combina com o seu prato.</div>
+                                </div>
+
+                                <!-- Radios -->
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Dificuldade</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="dificuldade" id="difFacil" value="facil" checked>
+                                        <label class="form-check-label" for="difFacil">Fácil</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="dificuldade" id="difMedio" value="medio">
+                                        <label class="form-check-label" for="difMedio">Médio</label>
+                                    </div>
+                                </div>
+
+                                <!-- Checkbox -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="promessa" required>
+                                        <label class="form-check-label text-muted" for="promessa">
+                                            Juro que a receita é barata e não usa ingredientes com nomes difíceis.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-orange w-100">Enviar Receita</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal Contato -->
+        <input type="checkbox" id="modalToggle" class="d-none">
+        <!-- open modal (btn) -->
+        <div class="container text-center my-5 pb-5">
+            <label for="modalToggle" class="btn btn-dark btn-lg px-5 shadow-sm">
+                <i class="bi bi-envelope me-2"></i> Fale com a gente
+            </label>
+        </div>
+        <div class="modal-custom position-fixed top-0 start-0 w-100 h-100 justify-content-center align-items-center">
+            
+            <!-- dark bg * -->
+            <label for="modalToggle" class="position-absolute top-0 start-0 w-100 h-100 modal-backdrop-custom"></label>
+
+            <div class="card border-0 shadow-lg z-3" style="max-width: 500px; width: 90%;">
+                <div class="card-header bg-white border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold mb-0">Fale com a gente</h5>
+                    <label for="modalToggle" class="btn-close" style="cursor: pointer;"></label>
+                </div>
+
+                <div class="card-body px-4 pb-4">
+                    <p class="text-muted mb-4">Mande sua sugestão, dúvida ou receita de família!</p>
+                    
+                    <form>
+                        <div class="mb-3">
+                            <label for="nomeModal" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nomeModal" placeholder="Como quer ser chamado?">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="emailModal" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="emailModal" placeholder="seu@email.com">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="mensagemModal" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagemModal" rows="3" placeholder="Escreva aqui..."></textarea>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletterModal">
+                            <label class="form-check-label text-muted" for="newsletterModal">
+                                Quero receber receitas baratinhas por e-mail toda semana.
+                            </label>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <label for="modalToggle" class="btn btn-outline-dark w-50">Cancelar</label>
+                            <button type="submit" class="btn btn-orange w-50">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------- DASHBOARD ---------- -->
+        <section class="container-fluid mt-5 pt-5 border-top bg-light">
+            <div class="row">
+                
+                <!-- Sidebar -->
+                <aside class="col-12 col-md-3 col-lg-2 d-none d-md-flex flex-column p-4 bg-white shadow-sm position-sticky top-0" style="height: 100vh;">
+                    <h5 class="text-orange fw-bold mb-4">Painel Admin</h5>
+                    <ul class="nav flex-column gap-2">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-dark bg-light rounded fw-bold"><i class="bi bi-graph-up me-2"></i>Métricas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted"><i class="bi bi-people me-2"></i>Usuários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted"><i class="bi bi-gear me-2"></i>Configurações</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-auto p-3 bg-dark text-white rounded text-center shadow-sm">
+                        <small>Versão<br><strong>v1.0</strong></small>
+                    </div>
+                </aside>
+
+                <!-- Visão Geral e Méticas -->
+                <main class="col-12 col-md-9 col-lg-10 p-4 p-md-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5 text-center text-md-start">
+                        <div class="mb-3 mb-md-0">
+                            <h2 class="fw-bold">Visão Geral</h2>
+                            <p class="text-muted d-none d-sm-block mb-0">Gerencie as estatísticas e aprovações do seu site.</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-orange px-4 mb-2 mb-md-0 me-md-2 shadow-sm">Nova Receita</button>
+                            <button class="btn btn-outline-danger px-4 shadow-sm">Gerar Relatório</button>
+                        </div>
+                    </div>
+
+                    <!-- Alerts -->
+                    <div class="alert alert-info border-0 shadow-sm d-flex align-items-center mb-5" role="alert">
+                        <i class="bi bi-info-circle-fill me-3 fs-4"></i>
+                        <div>
+                            Tivemos um pico de acessos! <strong>+250%</strong> de visitantes na receita de "Miojo Carbonara" na última hora.
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 mb-5">
+                        
+                        <!-- Card 1  -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm h-100 bg-success text-white">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Receitas Ativas</h6>
+                                    <h2 class="display-5 fw-bold mb-0">142</h2>
+
+                                    <span class="badge bg-white text-success mt-3 shadow-sm">+12 na semana</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm h-100 bg-warning text-dark">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Pendentes</h6>
+                                    <h2 class="display-5 fw-bold mb-0">8</h2>
+                                    <!-- Etapa 8: Badge 2 -->
+                                    <span class="badge bg-dark mt-3 shadow-sm">Ação necessária</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm h-100 bg-primary text-white">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Usuários</h6>
+                                    <h2 class="display-5 fw-bold mb-0">3.4k</h2>
+                                    <span class="badge bg-white text-primary mt-3 shadow-sm">Estável</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col order-first order-xl-last">
+                            <div class="card border-0 shadow-sm h-100 bg-danger text-white">
+                                <div class="card-body p-4">
+                                    <h6 class="text-uppercase mb-3 opacity-75">Erros</h6>
+                                    <h2 class="display-5 fw-bold mb-0">12</h2>
+                                    <span class="badge bg-white text-danger mt-3 shadow-sm">Atenção</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Admin Table -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-0 py-4 px-4 d-flex justify-content-between align-items-center">
+                            <h5 class="fw-bold mb-0">Últimas Submissões</h5>
+                        </div>
+                        <div class="card-body p-0 table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th class="ps-4">Receita</th>
+                                        <th>Autor</th>
+                                        <th>Status</th>
+                                        <th class="text-end pe-4">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">Lasanha de Pão de Forma</td>
+                                        <td class="text-muted">Maria Silva</td>
+                                        <td><span class="badge bg-warning text-dark">Em Análise</span></td>
+                                        <td class="text-end pe-4">
+                                            <button class="btn btn-sm btn-success me-2">Aprovar</button>
+                                            <button class="btn btn-sm btn-link text-danger text-decoration-none p-0">Rejeitar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">Brigadeiro sem Leite Moça</td>
+                                        <td class="text-muted">João Pedro</td>
+                                        <td><span class="badge bg-success">Publicado</span></td>
+                                        <td class="text-end pe-4">
+                                            <button class="btn btn-sm btn-outline-dark">Editar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
